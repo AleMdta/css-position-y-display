@@ -1,0 +1,34 @@
+/*Propiedad display = controla como se muestra un elemento del documento. (puede mostrarse u ocultarse)
+  -none (oculta un elemento,pero no se elimina, solo no se presenta en la página)
+  Caso de uso: cuando cambia el tamaño de la página y el menú pricipal "desaparece" pero aparaece uno de haburguesa.
+
+  -inline (es el valor por defecto, pone el elemento/elementos en línea horizontal)
+
+  -block (convierte el elemento en un bloque que ocupe todo el espacio de la pantalla)
+
+  -inline-block
+*/
+body {
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.articulo {
+  margin: 20px;
+  padding: 20px;
+  background-color: rgb(168, 206, 239);
+}
+#articulo-2 {
+  display: none;
+}
+/*Acomodará la lista del menú en línea horizontal*/
+#contenedor-nav-bar ul li {
+  display: inline;
+  margin: 20px;
+}
+#articulo-1 p {
+  display: block;
+}
+
+#contenedor-articulos {
+  display: block;
+}

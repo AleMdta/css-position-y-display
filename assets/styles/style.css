@@ -1,0 +1,71 @@
+/*Estilos generales (toda la página).*/
+body {
+  background-color: rgb(182, 141, 190);
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: center; /*centra lo que se encuentre dentro del contenedor body*/
+}
+/*Estilo para imagenes*/
+img {
+  width: 20%;
+}
+/*Estilo a todo el contenedor de productos*/
+.contenedor-productos {
+  border: 2px solid rgb(64, 146, 218);
+  margin: 20px;
+  padding: 20px;
+  display: flex;
+}
+
+/*Estilo a cada producto*/
+.producto {
+  background-color: pink;
+  border: 2px solid rgb(255, 255, 255);
+  margin: 20px;
+  padding: 20px;
+}
+#producto-1 {
+  /*position: static;
+  left: 100px;*/ /*En este caso como la posición está estática NO se va a mover el elemento a la izquierda, al contrario del producto-2*/
+  /* position: absolute; */
+}
+#producto-2 {
+  /*position: relative;
+  left: 100px;*/ /*En este caso como la posición está relativa SI se va a mover el elemento a la izquierda, al contrario del producto-1*/
+  /* position: absolute;
+  top: 200px; */
+}
+/* #producto-3 {
+  position: absolute;
+} */
+
+/*Estilos del botón de inicio*/
+#boton-inicio {
+  /*position: absolute;
+  left: 5000px;*/ /*Con la posición absoluta el botón se mueve tanto como queramos, aun fuera de todos los contenedores*/
+  position: fixed;
+  font-size: large;
+}
+/*Estilos para mi título*/
+#titulo-1 {
+  position: sticky;
+  top: 10px; /*Cuando escroleo 10px deja de ser relativo y el elemento se queda fijo*/
+}
+
+/* 
+Propiedad Position = posición de un elemento dentro de una "caja o contenedor", toma como consideración su posición dentro del documento y como se interpreta en el flujo de trabajo (arriba - abajo, izq - der)
+
+Valores:
+  -static (valor por defeto, no se puede modificar con elementos position-top-bottom-right-left)
+  Caso de uso: resumen de compras de un carrito de compras.
+
+  -relative (en este caso si obedece a los valores que pongamos en position(top, bottom, right, left) para cambiar las posición de los elementos, sin romper el flujo normal de trabajo, el elemento solo se mueve y deja un espacio vacío.)
+  Caso de uso: Un botón para ver el detalle del producto que podemos mover como queramos.
+
+  -absolute (los elementos no se encuentran dentro del flujo normal del documento (es decir que si se modifican los elementos que estén al rededor del elemento con absolut), si se mueve la posición no deja hueco como el relativ, sí no se recorre por encima de los demás elementos para moverse)
+
+  -fixed ( se mantiene fija su posición sin importar que scrolemos hacia arriba o hacia abajo / el elemento sale del flujo normal del documento, no le hace caso a nadie más que a al tamaño de la ventana (viewport))
+
+  -sticky (el elemento se comporta comno si fuera relativo al principio, pero luego se vuelve fijo cuando cambia algo en específcio como el tamaño en pixeles.
+  Caso de uso: barras de navegación, menús, que se quedan pegadas cuando se escrolean.
+*/
+
